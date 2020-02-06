@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="content/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="bootstrap-vue/bootstrap-vue.min.css" rel="stylesheet" type="text/css">
-    <link href="content/index.css?t=20200202" rel="stylesheet" type="text/css">
+    <link href="content/timeline.css" rel="stylesheet" type="text/css">
+    <link href="content/index.css?t=20200206" rel="stylesheet" type="text/css">
     <title>Bang Wu</title>
     <script src="js/vue.min.js"></script>
     <script src="bootstrap-vue/bootstrap-vue.min.js"></script>
@@ -32,8 +33,8 @@
                     <!-- Right aligned nav items -->
                     <b-navbar-nav class="ml-auto">
                         <b-navbar-nav>
-                            <b-nav-item href="#">Education</b-nav-item>
-                            <b-nav-item href="#">Experience</b-nav-item>
+                            <b-nav-item href="#page-top">Home</b-nav-item>
+                            <b-nav-item href="#page-2">Experience</b-nav-item>
                             <b-nav-item href="#">Skills</b-nav-item>
                             <b-nav-item href="#">Contact</b-nav-item>
                         </b-navbar-nav>
@@ -43,7 +44,7 @@
         </header>
         <main role="main" class="flex-shrink-0">
             <div class="container">
-                <div>
+                <div id="page-1">
                     <b-jumbotron :header="aboutme.name" :lead="aboutme.shortDesc">
                         <p>
                             <b-link :href="aboutme.website">{{aboutme.website}}</b-link>
@@ -55,11 +56,27 @@
                                 </li>
                             </ul>
                         </div>
-                        <b-button variant="primary" href="#">More Info</b-button>
+                        <b-button variant="primary" href="#page-2">More Info</b-button>
                     </b-jumbotron>
                 </div>
+                <div id="page-2">
+                    <h2>Experience</h2>
+                    <div class="timeline" style="margin-top: 2rem;">
+                        <div :class="(index%2 == 0) ? 'containertime left' : 'containertime right'" v-for="(obj,index) in experience">
+                            <div class="content">
+                                <h4>{{obj.company}}&nbsp;<i :class="obj.icon"></i></h4>
+                                <p>{{obj.title}}&nbsp;<small>{{obj.sdate}} - {{obj.edate}}</small></p>
+                                <ul>
+                                    <li v-for="w in obj.works">
+                                        {{w.name}}&#58;&nbsp;<br>{{w.desc}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a class="scroll-to-top" href="#page-top" v-show="showScrolltop">
+            <a class="scroll-to-top" href="#page-1" v-show="showScrolltop">
                 <b-icon icon="chevron-compact-up" class="rounded-circle bg-primary"></b-icon>
             </a>
         </main>
@@ -68,9 +85,6 @@
                 <span class="text-muted">
                     Copyright&nbsp;&copy;&nbsp;2020&nbsp;
                 </span>
-                <a class="mailto" href="mailto:punkinpunkin@livemail.tw">
-                    <b-icon icon="envelope-fill"></b-icon>
-                </a>
             </div>
         </footer>
     </div>
@@ -80,14 +94,21 @@
                 el: '#page-top',
                 data() {
                     return {
-                        aboutme: null,
+                        aboutme: {
+                            website: "http://punkinpunkin.github.io/"
+                        },
+                        experience: null,
                         showScrolltop: false
                     }
                 },
                 mounted() {
                     axios
                         .get('model/aboutme.json')
-                        .then(response => (this.aboutme = response.data))
+                        .then(response => (this.aboutme = response.data));
+
+                    axios
+                        .get('model/experience.json')
+                        .then(response => (this.experience = response.data));
                 },
                 created() {
                     let _this = this;
@@ -96,7 +117,7 @@
                 watch: {},
                 methods: {
                     handleScroll(e) {
-                        this.showScrolltop = (window.scrollY > 1000);
+                        this.showScrolltop = (window.scrollY > 600);
                     }
                 }
             })
