@@ -1,68 +1,95 @@
- [{
-         "id": 1,
-         "company": "國立中正大學",
-         "icon": "fas fa-graduation-cap",
-         "sdate": "2009/09",
-         "edate": "2013/06",
-         "title": "資訊管理學系",
-         "works": []
-     }, {
-         "id": 2,
-         "company": "毅聲科技",
-         "icon": "fas fa-briefcase",
-         "sdate": "2014/10",
-         "edate": "2016/09",
-         "title": "工程師",
-         "works": [{
-                 "name": "電銷/客服系統",
-                 "desc": "開發與維護; 依客戶需求客製功能, 並維護已上線系統, 使用 .NET C#, 以 web form 為主, 也有開發 win form 及 windows service 相關經驗."
-             },
-             {
-                 "name": "報表開發",
-                 "desc": "開發與維護; 大多直接透過SQL從電銷系統匯出Excel部分使用crystal report."
-             }
-         ]
-     },
-     {
-         "id": 3,
-         "company": "啟碁科技",
-         "icon": "fas fa-briefcase",
-         "sdate": "2016/09",
-         "edate": "2019/03",
-         "title": "資深工程師",
-         "works": [{
-                 "name": "電子簽核系統",
-                 "desc": "開發與維護; 開發BorG電子簽核系統表單, 依SA文件的要求實作功能, 包含UI畫面、商業邏輯及簽核流程邏輯, 多為C#開發之web form, 少數使用VB."
-             },
-             {
-                 "name": "供應商文件管理平台",
-                 "desc": "建置與維護; 使用 .NET MVC 開發, 前端使用 Bootstrap, 資料庫為 Oracle, 與公司 PLM 系統透過 Rabbit MQ 做訊息交換, 上線後維護約半年交接給其他部門."
-             },
-             {
-                 "name": "人資系統",
-                 "desc": "系統導入、開發與維護; 智將/用友/鼎盛 人資系統導入與維護；作為人資部門與廠商之間的溝通橋梁；透過廠商 web api 取得人資系統資料, 處理後再轉拋至其他公司系統; 廠商部分功能修改, 以及報表開發. 程式語言 Java、C#, 資料庫為 Oracle 及 MS SQL, 使用 reporting service 開發報表."
-             }
-         ]
-     },
-     {
-         "id": 4,
-         "company": "圓智資訊",
-         "icon": "fas fa-briefcase",
-         "sdate": "2019/06",
-         "edate": "present",
-         "title": "專案工程師",
-         "works": [{
-                 "name": "臺北市政府衛生局食藥妝地圖網路",
-                 "desc": "開發與維護; 介接中央產品通路管理資訊系統 (PMDS), 下載業者稽查資料並呈現於網頁供民眾查詢."
-             },
-             {
-                 "name": "臺北市政府衛生局健康雲",
-                 "desc": "現有系統維護; 排除滲透測試、原始碼掃描之弱點, 以及報表客製."
-             },
-             {
-                 "name": "臺北市政府衛生局憑證登入",
-                 "desc": "開發與維護; 介接台北市憑證認證服務, 整合自然人憑證或醫事人員憑證登入系統."
-             }
-         ]
-     }
- ]
+[
+   {
+      "id":1,
+      "company":"國立中正大學",
+      "icon":"fas fa-graduation-cap",
+      "sdate":"2009/09",
+      "edate":"2013/06",
+      "title":"資訊管理學系",
+      "works":[]
+   },
+   {
+      "id":2,
+      "company":"毅聲科技",
+      "icon":"fas fa-briefcase",
+      "sdate":"2014/10",
+      "edate":"2016/09",
+      "title":"工程師",
+      "works":[
+         {
+            "name":"電銷/客服系統",
+            "desc":"開發與維護; 依客戶需求客製功能, 並維護已上線系統, 使用 .NET C#, 以 web form 為主, 也有開發 win form 及 windows service 相關經驗."
+         },
+         {
+            "name":"報表開發",
+            "desc":"開發與維護; 大多直接透過SQL從電銷系統匯出Excel部分使用crystal report."
+         }
+      ]
+   },
+   {
+      "id":3,
+      "company":"啟碁科技",
+      "icon":"fas fa-briefcase",
+      "sdate":"2016/09",
+      "edate":"2019/03",
+      "title":"資深工程師",
+      "works":[
+         {
+            "name":"電子簽核系統",
+            "desc":"開發與維護; 開發BorG電子簽核系統表單, 依SA文件的要求實作功能, 包含UI畫面、商業邏輯及簽核流程邏輯, 多為C#開發之web form, 少數使用VB."
+         },
+         {
+            "name":"供應商文件管理平台",
+            "desc":"建置與維護; 使用 .NET MVC 開發, 前端使用 Bootstrap, 資料庫為 Oracle, 與公司 PLM 系統透過 Rabbit MQ 做訊息交換, 上線後維護約半年交接給其他部門."
+         },
+         {
+            "name":"人資系統",
+            "desc":"系統導入、開發與維護; 智將/用友/鼎盛 人資系統導入與維護；作為人資部門與廠商之間的溝通橋梁；透過廠商 web api 取得人資系統資料, 處理後再轉拋至其他公司系統; 廠商部分功能修改, 以及報表開發. 程式語言 Java、C#, 資料庫為 Oracle 及 MS SQL, 使用 reporting service 開發報表."
+         }
+      ]
+   },
+   {
+      "id":4,
+      "company":"圓智資訊",
+      "icon":"fas fa-briefcase",
+      "sdate":"2019/06",
+      "edate":"2021/02",
+      "title":"專案工程師",
+      "works":[
+         {
+            "name":"臺北市政府衛生局資料交換平台",
+            "desc":"串接中央資料並提供給局內其他廠商介接."
+         },
+         {
+            "name":"臺北市政府衛生局食藥妝地圖網路",
+            "desc":"開發與維護; 介接中央產品通路管理資訊系統 (PMDS), 下載業者稽查資料並呈現於網頁供民眾查詢."
+         },
+         {
+            "name":"臺北市政府衛生局健康雲",
+            "desc":"現有系統維護; 排除滲透測試、原始碼掃描之弱點, 以及報表客製."
+         },
+         {
+            "name":"臺北市政府衛生局憑證登入",
+            "desc":"開發與維護; 介接台北市憑證認證服務, 整合自然人憑證或醫事人員憑證登入系統."
+         }
+      ]
+   },
+   {
+      "id":5,
+      "company":"好心肝基金會",
+      "icon":"fas fa-briefcase",
+      "sdate":"2021/03",
+      "edate":"present",
+      "title":"專案工程師",
+      "works":[
+         {
+            "name":"健檢系統",
+            "desc":"開發與維護好心肝健康管理中心之健檢系統."
+         },
+         {
+            "name":"好心肝App",
+            "desc":"Android版App維護並開發新功能, 並上架Google Play."
+         }
+      ]
+   }
+]

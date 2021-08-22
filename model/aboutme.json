@@ -6,13 +6,10 @@
     "website": "http://punkinpunkin.github.io/",
     "links": [{
         "icon": "fab fa-linkedin fa-2x",
-        "url": "https://www.linkedin.com/in/%E5%90%B3-%E6%88%90%E9%82%A6-1341317b/"
+        "url": "https://linkedin.com/in/吳-成邦-1341317b/"
     }, {
         "icon": "fab fa-github-square fa-2x",
         "url": "https://github.com/PunkinPunkin"
-    }, {
-        "icon": "fab fa-facebook-square fa-2x",
-        "url": "https://www.facebook.com/chengbang.wu"
     }, {
         "icon": "fas fa-at fa-2x",
         "url": "mailto:punkinpunkin@livemail.tw"
